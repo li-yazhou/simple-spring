@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+    <!-- 测试依赖注入、单例和原生scope -->
+	<bean id="A" class="org.alpha.ioc.entity.ObjA" scope="singleton">
+		<property name="name" value="A对象"></property>
+		<property name="age" value="22"></property>
+	</bean>
+	<bean id="B" class="org.alpha.ioc.entity.ObjB" scope="prototype">
+		<property name="name" value="B对象"></property>
+		<property name="objA" ref="A"></property>
+	</bean>
+	<bean id="C" class="org.alpha.ioc.entity.ObjC" scope="singleton">
+		<property name="name" value="C对象"></property>
+		<property name="b" ref="B"></property>
+	</bean>
+
+	<!-- 测试循环依赖 -->
+	<bean id="D" class="org.alpha.ioc.entity.ObjD" scope="singleton">
+		<property name="name" value="D对象"></property>
+		<property name="e" ref="E"></property>
+	</bean>
+	<bean id="E" class="org.alpha.ioc.entity.ObjE" scope="singleton">
+		<property name="name" value="E对象"></property>
+		<property name="d" ref="D"></property>
+	</bean>
+</beans>
