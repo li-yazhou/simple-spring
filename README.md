@@ -1,9 +1,7 @@
-﻿# 简易的Spring Ioc
+﻿# simple-spring
 
-1.引入4个jar包
-    - dom4j.jar
-    - xpath的jar包
-    - beanutils.jar
-    - logging*.jar
+微型版本 Spring IoC 和 AOP，旨在帮助理解框架原理。
 
-2.实现代码
+## [simple-ioc](simple-ioc/README.md)
+
+## [simple-aop](simple-aop/README.md)
