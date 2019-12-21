@@ -20,9 +20,17 @@ public class BeforeMethodAdviceInterceptor implements AopMethodInterceptor {
     }
 
 
+    /**
+     * 先执行增强代码，后执行原始的方法
+     *
+     * @param mi
+     * @return
+     * @throws Throwable
+     */
     @Override
     public Object invoke(MethodInvocation mi) throws Throwable {
 
+        // TODO
         advice.before(mi.getMethod(), mi.getArguments(), mi);
 
         return mi.proceed();

@@ -12,6 +12,13 @@ import java.lang.reflect.Method;
  */
 public interface BeforeMethodAdvice extends Advice {
 
+    /**
+     *
+     * @param method
+     * @param arguments
+     * @param target
+     * @return
+     */
     Object before(Method method, Object[] arguments, Object target);
 
 }

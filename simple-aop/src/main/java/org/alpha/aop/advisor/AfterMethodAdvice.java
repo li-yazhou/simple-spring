@@ -12,6 +12,14 @@ import java.lang.reflect.Method;
  */
 public interface AfterMethodAdvice extends Advice {
 
-    Object after(Method method, Object[] arguments, Object target);
+    /**
+     *
+     * @param object
+     * @param method
+     * @param arguments
+     * @param target
+     * @return
+     */
+    Object after(Object object, Method method, Object[] arguments, Object target);
 
 }
